@@ -25,6 +25,13 @@ public class Validate {
     // \\d* user can input more number or not
     static String Phone = "^\\d{10}\\d*$";
 
+     /*
+    [A-Za-z0-9.-+%]+ user must be input from a-z ignore case,0-9 and .-+% least one times
+    @ user must be input "@"
+    [A-Za-z.-]+ user mustbe input from a-z ignore case, "." "-" least one times
+    \\. user must be input "."
+    [A-Za-z]{2,4} user must be input from a-z ignore 2 - 4 times
+     */
     static String mail = "^[A-Za-z0-9.+-_%]+@[A-Za-z.-]+\\.[A-Za-z]{2,4}$";
 
     public static int getInputLimit(int min, int max) {
