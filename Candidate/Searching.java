@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 public class Searching {
 
+    //Search function with first name, last name and type of candidate
     public static void searchCandidate(ArrayList<Candidate> ac) {
 
         printListNameCandidate(ac);
@@ -23,14 +24,9 @@ public class Searching {
         String name = Validate.getInputString().toLowerCase();
         System.out.println("enter type : ");
         int type = Validate.getInputLimit(0, 2);
-//        for (Candidate c : ac) {
-//            if (c.getTypeOfCandidate() == type && c.getLastName().toLowerCase().contains(name)
-//                    || c.getFirstName().toLowerCase().contains(name)) {
-//                System.out.println("The candidates found:");
-//                System.out.println(ac.toString());
-//            }
-//        }
         
+         //loop begin at first candidate element, come to next candidate element 
+        //and stop at last candidate element
         for (int i = 0; i <ac.size(); i++) {
              if (ac.get(i).getTypeOfCandidate() == type && ac.get(i).getLastName().toLowerCase().contains(name)
                     || ac.get(i).getFirstName().toLowerCase().contains(name)) {
@@ -43,21 +39,21 @@ public class Searching {
     public static void printListNameCandidate(ArrayList<Candidate> ac) {
         System.out.println("Experience Candidate");
         for (Candidate candidate : ac) {
-            if (candidate instanceof Experience) {
+            if (candidate instanceof Experience) {// display name of experience candidate
                 System.out.println(candidate.getFirstName() + " " + candidate.getLastName());
             }
         }
 
         System.out.println("Fresher Candidate");
         for (Candidate candidate : ac) {
-            if (candidate instanceof Fresher) {
+            if (candidate instanceof Fresher) {// display name of fresher candidate
                 System.out.println(candidate.getFirstName() + " " + candidate.getLastName());
             }
         }
 
         System.out.println("Internship Candidate");
         for (Candidate candidate : ac) {
-            if (candidate instanceof Internship) {
+            if (candidate instanceof Internship) {// display name of intership candidate
                 System.out.println(candidate.getFirstName() + " " + candidate.getLastName());
             }
         }
