@@ -32,7 +32,7 @@ public class Fresher extends Candidate {
     public String getGraduationRank() {
         return graduationRank;
     }
-
+    // create fresher candidate
     public void createFresher(ArrayList<Candidate> ac, Candidate candidate) {
         System.out.println("-------- Fresher candidate --------");
 
