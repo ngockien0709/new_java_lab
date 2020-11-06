@@ -76,10 +76,10 @@ public class Candidate {
     }
     
     public void getInputCandidate(ArrayList<Candidate> ac,int type) {
-        while (true) {
+        while (true) {//loop until have error or command "break"
             System.out.print("enter CandidateID: ");
             candidateID = Validate.getInputString();
-            if (Validate.checkExistedCandidateID(ac, candidateID)) {
+            if (Validate.checkExistedCandidateID(ac, candidateID)) {// check id exist
                 break;
             }
         }
