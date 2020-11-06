@@ -18,7 +18,7 @@ public class Experience extends Candidate {
 
     public Experience() {
     }
-
+    
     public Experience(int expInYear, String proSkill, String candidateID, String firstName, String lastName, int birthDate, String address, String phone, String email, int typeOfCandidate) {
         super(candidateID, firstName, lastName, birthDate, address, phone, email, typeOfCandidate);
         this.expInYear = expInYear;
@@ -32,7 +32,7 @@ public class Experience extends Candidate {
     public String getProSkill() {
         return proSkill;
     }
-
+    // create experience candidate
     public void creatExp(ArrayList<Candidate> ac, Candidate candidate) {
         System.out.println("-------- Experience candidate --------");
         
