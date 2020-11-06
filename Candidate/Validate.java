@@ -54,7 +54,10 @@ public class Validate {
     }
     
     public static boolean checkExistPhone(ArrayList<Candidate> ac,String phone){
+        //loop begin at first phone element, come to next phone element 
+        //and stop at last phone element
         for (Candidate candidate : ac) {
+            //compare phone check with phone of candidate
             if(candidate.getPhone().equalsIgnoreCase(phone)){
                 System.out.println("this phone existed ");
                 return false;
@@ -75,7 +78,10 @@ public class Validate {
     }
     
     public static boolean checkExistEmail(ArrayList<Candidate> ac,String email){
+        //loop begin at first ID element, come to next ID element 
+        //and stop at last ID element
         for (Candidate candidate : ac) {
+            //compare id check with id of candidate
             if(candidate.getEmail().equalsIgnoreCase(email)){
                 System.out.println("this email existed");
                 return false;
@@ -85,7 +91,7 @@ public class Validate {
     }
     
     public static String getInputString(){
-        while (true) {            
+        while (true) {  //loop until user input correct          
             String s= input.nextLine().trim();
             if(s.isEmpty()){
                 System.out.println("not empty");
@@ -99,7 +105,7 @@ public class Validate {
     public static int checkInputOfEXP(int birthDate) {
         int currrentYear = Calendar.getInstance().get(Calendar.YEAR);
         int age = currrentYear-birthDate;
-        while (true) {            
+        while (true) {     //loop until user input correct       
             int exp = getInputLimit(1, 100);
             if(exp>age){
                 System.out.println("Experience must be smaller than age!!!");
@@ -112,7 +118,7 @@ public class Validate {
    
 
     public String returnRankOfGraduation() {
-        while (true) {            
+        while (true) {    //loop until user input correct        
             String s = input.nextLine();
             if(s.equalsIgnoreCase("Excellent")||s.equalsIgnoreCase("Good")
                ||s.equalsIgnoreCase("Fair")
@@ -123,8 +129,10 @@ public class Validate {
             }
         }
     }
-
+    //check duplicate id of list candidate
     public static boolean checkExistedCandidateID(ArrayList<Candidate> t, String candidateID) {
+        //loop begin at first ID element, come to next ID element 
+        //and stop at last ID element
         for (int i = 0; i < t.size(); i++) {
             if (t.get(i).getCandidateID().equalsIgnoreCase(candidateID)) {
                 System.out.println("this ID existed!!!");
@@ -137,7 +145,7 @@ public class Validate {
     
 
     public static boolean checkUserChoose(){
-        while (true) {            
+        while (true) {   //loop until user input correct         
             String s = getInputString();
             if(s.equalsIgnoreCase("y")){
                 return true;
@@ -149,7 +157,7 @@ public class Validate {
     
     public static int chekGraduationDate(int birthDate){
         int yearCurrent = Calendar.getInstance().get(Calendar.YEAR);
-        while (true) {            
+        while (true) { //loop until user input correct           
             
             try {
                 int input = Integer.parseInt(Validate.input.nextLine());
