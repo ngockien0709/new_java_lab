@@ -12,6 +12,8 @@ import java.util.ArrayList;
  * @author nguye
  */
 public class CreateCandidate {
+    
+    //create Candidate with the corresponding type
     public static void createCandidateWithType(int type,ArrayList<Candidate>ac,Candidate candi){
          while (true) {
             //check value of type is equal 0
