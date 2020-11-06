@@ -38,7 +38,7 @@ public class Internship extends Candidate {
     public String getUniversity() {
         return university;
     }
-
+    // create intership candidate
     public  void createInternship(ArrayList<Candidate> ac, Candidate candidate) {
         System.out.println("-------- Intern candidate --------");
 
